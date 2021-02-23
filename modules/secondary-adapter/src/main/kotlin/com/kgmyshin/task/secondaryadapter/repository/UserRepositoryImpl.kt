@@ -15,13 +15,13 @@ internal class UserRepositoryImpl(
 ) : UserRepository {
   override suspend fun findByUserId(id: UserId): User? = withContext(IO) {
     userDao.selectByUserId(id.value)?.let {
-      UserConverter.converttaskmainModel(it)
+      UserConverter.convertToDomainModel(it)
     }
   }
 
   override suspend fun store(user: User): User = withContext(IO) {
     userDao.insert(UserConverter.convertToDataModel(user)).let {
-      UserConverter.converttaskmainModel(it)
+      UserConverter.convertToDomainModel(it)
     }
   }
 }

@@ -12,7 +12,7 @@ internal object UserConverter: Converter {
     encryptedPassword = user.encryptedPassword.value
   )
 
-  fun converttaskmainModel(userDataModel: UserDataModel): User = User(
+  fun convertToDomainModel(userDataModel: UserDataModel): User = User(
     id = UserId(require(userDataModel.id)),
     encryptedPassword = EncryptedPassword(require(userDataModel.encryptedPassword))
   )
