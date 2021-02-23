@@ -34,28 +34,28 @@ $ curl -X POST \
 $ curl -X POST \
       -H 'Content-Type: application/json' \
       -H 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoia2dteXNoaW4iLCJleHAiOjE1NzEyMDAyMTB9.QJoEihljH145BpdgBJvU2eTbFsszBFj4QyC-RQ_SwDQ' \
-      -d '{"title":"タイトル", "description":"説明説明説明説明説明説明説明"}' \
+      -d '{"title":"title", "description":"descriptiondescriptiondescription"}' \
       localhost:8080/tasks
 
 $ curl -X GET \
      -H 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoia2dteXNoaW4iLCJleHAiOjE1NzEyMDAyMTB9.QJoEihljH145BpdgBJvU2eTbFsszBFj4QyC-RQ_SwDQ' \
      localhost:8080/tasks?page=0&per=2
 
-[{"id":"9fa35320-efb9-11e9-a2fb-acde48001122","title":"タイトル1","description":"説明説明説明説明説明説明説明1","completed":false},{"id":"9fa35320-efb9-11e9-a2fb-acde48001122","title":"タイトル2","description":"説明説明説明説明説明説明説明2","completed":false}]
+[{"id":"9fa35320-efb9-11e9-a2fb-acde48001122","title":"title1","description":"descriptiondescriptiondescription1","completed":false},{"id":"9fa35320-efb9-11e9-a2fb-acde48001122","title":"title2","description":"descriptiondescriptiondescription2","completed":false}]
 
 $ curl -X GET \
      -H 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoia2dteXNoaW4iLCJleHAiOjE1NzEyMDAyMTB9.QJoEihljH145BpdgBJvU2eTbFsszBFj4QyC-RQ_SwDQ' \
      localhost:8080/tasks/9fa35320-efb9-11e9-a2fb-acde48001122
 
-{"id":"9fa35320-efb9-11e9-a2fb-acde48001122","title":"タイトル","description":"説明説明説明説明説明説明説明","completed":false}
+{"id":"9fa35320-efb9-11e9-a2fb-acde48001122","title":"title","description":"descriptiondescriptiondescription","completed":false}
 
 $ curl -X PUT \
       -H 'Content-Type: application/json' \
       -H 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoia2dteXNoaW4iLCJleHAiOjE1NzEyMDAyMTB9.QJoEihljH145BpdgBJvU2eTbFsszBFj4QyC-RQ_SwDQ' \
-      -d '{"id":"9fa35320-efb9-11e9-a2fb-acde48001122", "title":"タイトル", "description":"説明説明説明説明説明説明説明", "completed":true}' \
+      -d '{"id":"9fa35320-efb9-11e9-a2fb-acde48001122", "title":"title", "description":"descriptiondescriptiondescription", "completed":true}' \
       localhost:8080/tasks/9fa35320-efb9-11e9-a2fb-acde48001122
 
-{"id":"9fa35320-efb9-11e9-a2fb-acde48001122","title":"タイトル","description":"説明説明説明説明説明説明説明","completed":true}
+{"id":"9fa35320-efb9-11e9-a2fb-acde48001122","title":"title","description":"descriptiondescriptiondescription","completed":true}
 
 $ curl -X DELETE \
      -H 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoia2dteXNoaW4iLCJleHAiOjE1NzEyMDAyMTB9.QJoEihljH145BpdgBJvU2eTbFsszBFj4QyC-RQ_SwDQ' \
