@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:task-demo-dev;DB_CLOSE_ON_EXIT=TRUE;MODE=MySQL
+    username: task-demo-dev
+    password:
+    initialization-mode: always
+  h2:
+    console:
+      enabled: true

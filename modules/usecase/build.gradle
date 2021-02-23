@@ -1,0 +1,15 @@
+plugins {
+  id 'kotlin'
+  id 'org.jetbrains.kotlin.plugin.spring'
+}
+
+dependencies {
+  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+  implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinx_version"
+  implementation 'org.springframework:spring-beans:5.3.4'
+  implementation 'org.springframework:spring-context:5.3.4'
+  implementation 'com.eaio.uuid:uuid:3.2'
+  implementation project(":modules:domain")
+  implementation project(":modules:supports")
+  implementation project(":modules:secondary-adapter")
+}

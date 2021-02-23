@@ -1,0 +1,5 @@
+include ":modules:domain",
+  ":modules:secondary-adapter",
+  ":modules:usecase",
+  ":modules:http-adapter",
+  ":modules:supports"

@@ -1,0 +1,17 @@
+create TABLE `user` (
+  `id` VARCHAR(100) PRIMARY KEY NOT NULL,
+  `encrypted_password` VARCHAR(255) NOT NULL,
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+  `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+);
+
+create TABLE `task` (
+  `id` VARCHAR(100) PRIMARY KEY NOT NULL,
+  `user_id` VARCHAR(100) NOT NULL,
+  `title` VARCHAR(255) NOT NULL,
+  `description` TEXT,
+  `completed` BOOLEAN NOT NULL,
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+  `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+  CONSTRAINT `task_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
+);
