@@ -10,7 +10,7 @@ import kotlinx.coroutines.withContext
 import org.springframework.stereotype.Repository
 
 @Repository
-internal open class UserRepositoryImpl(
+internal class UserRepositoryImpl(
   private val userDao: UserDao
 ) : UserRepository {
   override suspend fun findByUserId(id: UserId): User? = withContext(IO) {

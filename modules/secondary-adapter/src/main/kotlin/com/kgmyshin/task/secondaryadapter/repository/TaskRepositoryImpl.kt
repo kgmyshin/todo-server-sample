@@ -9,7 +9,7 @@ import com.kgmyshin.task.secondaryadapter.repository.converter.TaskConverter
 import org.springframework.stereotype.Repository
 
 @Repository
-internal open class TaskRepositoryImpl(
+internal class TaskRepositoryImpl(
   private val taskDao: TaskDao
 ) : TaskRepository {
   override suspend fun findByTaskId(id: TaskId): Task? =
