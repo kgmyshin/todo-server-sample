@@ -5,22 +5,13 @@ buildscript {
   ext.spek_version = '2.0.6'
 
   repositories {
-    google()
-    jcenter()
     mavenCentral()
     maven {
       url "https://plugins.gradle.org/m2/"
     }
-    maven {
-      url "https://dl.bintray.com/kotlin/kotlin-eap"
-    }
-    maven {
-      url "https://kotlin.bintray.com/kotlinx"
-    }
   }
   dependencies {
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-    classpath "org.jetbrains.kotlin:kotlin-frontend-plugin:0.0.45"
     classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.10'
     classpath "org.jetbrains.kotlin:kotlin-allopen:$kotlin_version"
     classpath 'org.springframework.boot:spring-boot-gradle-plugin:2.4.3'
@@ -29,14 +20,9 @@ buildscript {
 
 allprojects {
   repositories {
-    google()
-    jcenter()
     mavenCentral()
     maven {
       url "https://plugins.gradle.org/m2/"
-    }
-    maven {
-      url "https://kotlin.bintray.com/kotlinx"
     }
   }
 }
